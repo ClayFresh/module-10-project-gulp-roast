@@ -1,0 +1,532 @@
+/*CSS CODE*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    border: 30px solid #082B59; 
+    padding: 5px;
+    margin: 0;
+    background-color: #f2f2f2;  
+    line-height: 2.5;
+    text-indent: 0px;
+    letter-spacing: 2px;
+    word-spacing: -1px;
+    font-family: Courier, Optima, Palatino;
+    font-style: normal;
+    overflow-x: hidden;
+}
+
+/*GRID LAYOUT*/
+.containerGrid {
+    display: grid;
+    padding: 0;
+    gap: 20px;
+    width: 100%;
+    margin: 0;
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+
+/*GRID AREAS*/
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+    padding: 0;
+    width: 100%;
+}
+
+main h1 {
+    color: black;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+main > picture {
+    width: 100%;
+    display: block;
+}
+
+main > picture img {
+    width: 100%;
+    height: auto;       
+    max-height: 500px;  
+    object-fit: contain;  
+    margin: 0 0 40px 0;
+    border-radius: 8px;
+}
+
+nav {
+    grid-area: nav;
+}
+
+.article {
+    grid-area: article;
+    text-align: center;
+    display: inline;  
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px; 
+    padding: 2rem;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(8, 43, 89, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.article h2.about {
+    margin-top: 0;
+    padding: 1rem;
+    border-radius: 8px 8px 0 0;
+}
+
+.article p {
+    padding: 0 1.5rem;
+}
+
+.features {
+    width: 100%;
+    max-width: 1000px;  
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+  
+.features article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;  
+    gap: 40px;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: center;  
+    max-width: 900px;   
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features article img {
+    width: 45%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.features article p {
+    width: 45%;
+    margin: 0;
+    text-align: center;  
+    padding: 0 20px;
+}
+
+.features article:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.products {
+    display: grid;
+    gap: 30px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.products article {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(8, 43, 89, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.products article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(8, 43, 89, 0.15);
+}
+
+.products .product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.products .product-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.products h2 {
+    color: black;
+    margin-bottom: 15px;
+    margin: 0 0 25px 0;
+    font-size: 1.5rem;
+}
+
+.products p {
+    color: black;
+    line-height: 1.6;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.contact {
+    grid-area: contact;
+    background-color: #f2f2f2;
+    color: black;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 40px auto;
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact h2 {
+    color: black;
+    margin-bottom: 20px;
+}
+
+.contact address {
+    font-style: normal;
+    color: black;
+    line-height: 1.8;
+}
+
+.contact a {
+    color: black !important;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contact img {
+    margin: 0 auto 30px;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.button {
+    grid-area: button;
+    text-align: center;
+    width: 100%;
+    margin: 2rem auto;
+}
+
+.footer {
+    grid-area: footer;
+    text-align: center;
+    font-style: oblique;
+    font-size: 12px;
+    margin-top: 40px;
+    padding: 20px;
+    color: black;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.footer li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.footer .link {
+    color: black;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer .link:hover {
+    color: #D98555;
+}
+
+/*IMAGE*/
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+picture {
+    display: block;
+    width: 100%;
+}
+
+/*LOGO*/
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+/*NAV*/
+.nav {
+    list-style-type: none;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+  
+.nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.nav a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #D98555 !important;
+}
+
+/*ABOUT*/
+.about {
+    text-align: center;
+    color: #f2f2f2;
+    background-color: black;
+}
+
+/*PHOTO*/
+.photo {
+    grid-area: photo;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.photo picture {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.photo p {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    padding: 0 1rem;
+}
+
+/*LINKS*/
+a:link {
+    color: #082B59;
+}
+
+a:hover {
+    color: #59331D;
+}
+
+a:visited {
+    color: #131D26;
+}
+
+.contact a:hover {
+    color: #D98555 !important;
+}
+
+.article:hover {
+    transform: translateY(-5px);
+}
+
+/*BUTTON STYLING*/
+button {
+    padding: 10px 20px;
+    background-color: #D98555;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #59331D;
+}
+
+.cta-button {
+    display: inline-block;  
+    background-color: #D98555;  
+    color: #f2f2f2;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+  
+.cta-button:hover {
+    background-color: #59331D;
+}
+
+/*MOBILE FIRST (320px+)*/
+@media screen and (min-width: 320px) {
+    .containerGrid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "article"
+            "button"
+            "photo"
+            "contact"
+            "footer";
+        padding: 0 10px;
+    }
+
+    .nav {
+        text-align: center;
+        padding: 0;
+    }
+
+    .nav li {
+        margin: 10px 0;
+    }
+
+    .photo img {
+        max-width: 100%;
+        max-height: 400px;
+        margin-bottom: 1rem;
+    }
+
+    .logo img {
+        max-width: 150px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .features article,
+    .features article:nth-child(even) {
+        flex-direction: column;
+    }
+    
+    .features article img,
+    .features article p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .products {grid-template-columns: 1fr;
+    padding: 15px;
+    }
+}
+
+/*TABLET (768px+)*/
+@media screen and (min-width: 768px) {
+    .containerGrid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "header header"
+            "nav nav"
+            "main main"
+            "article photo"
+            "button button"
+            "contact contact"
+            "footer footer";
+        grid-auto-rows: min-content;
+        padding: 0 20px;
+    }
+
+    .nav {
+        text-align: center;
+    }
+
+    .nav li {
+        display: inline-block;
+        margin: 0 15px;
+    }
+
+    .photo {
+        height: 100%;
+    }
+
+    .photo img {
+        max-height: 400px;
+        object-fit: cover;
+    }
+
+    .logo img {
+        max-width: 175px;
+    }
+
+    .article, .photo {
+        align-self: center;
+        margin: 1rem;
+        height: auto;
+    }
+}
+
+/*DESKTOP (800px+)*/
+@media screen and (min-width: 800px) {
+    .containerGrid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "header header header header"
+            "nav nav nav nav"
+            "main main main main"
+            "article article photo photo"
+            "button button button button"
+            "contact contact contact contact"
+            "footer footer footer footer";
+        padding: 0 30px;
+    }
+
+    .photo img {
+        max-height: 500px; 
+    }
+
+    .logo img {
+        max-width: 200px;
+    }
+
+    .article, .photo {
+        margin: 1rem;
+    }
+}
